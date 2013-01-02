@@ -16,6 +16,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'libv8'
+  gem 'therubyracer'
   
   gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                                 git: 'https://github.com/anjlab/bootstrap-rails.git'
