@@ -44,9 +44,11 @@ gem 'haml-rails'
 gem 'simple_form'
 
 # Testing and spec'ing
-gem 'rspec'
-gem 'guard-rspec'
-gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i
+group :test do
+  gem 'rspec'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', require: false
+end
 
 # Deployment
 gem 'capistrano'
