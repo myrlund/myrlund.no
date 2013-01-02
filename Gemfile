@@ -52,3 +52,4 @@ end
 
 # Deployment
 gem 'capistrano'
+gem 'yaml_db'
