@@ -1,0 +1,53 @@
+
+#top {
+  padding: .5em 0 0;
+}
+
+#head {
+  padding: 2em 0 1em;
+  border-bottom: 3px solid $textColor;
+  
+  h1 {
+    font-size: 3.2em;
+  }
+    
+  small, nav {
+    display: block;
+    font-size: 1.6em;
+    font-family: $headingsFontFamily;
+    color: $gray;
+    
+  }
+  
+  small {
+    margin-top: .2em;
+    font-style: italic;
+  }
+  
+  nav {
+    ul {
+      margin: 0;
+      
+      li {
+        display: inline-block;
+        margin-left: .5em;
+        
+        a {
+          text-decoration: none;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+#body {
+  padding-top: 1.0em;
+}
+
+#foot {
+  border-top: 1px solid $grayLight;
+  background: $grayLighter;
+  padding: 2em 0 3em;
+  margin-top: 1em;
+}

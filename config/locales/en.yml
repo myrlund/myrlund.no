@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  sign_in: Sign in
+  sign_out: Sign out
+  leave_a_comment: Leave a comment
+  website: Website
+  new_post: New post
+  edit_post: Edit post
+  signed_in_as: "Signed in as %{user}"
+  not_you: Not you?
+  
+  tagline: Words in a huge cloud
+  
+  date:
+    formats:
+      fancy: "<b>%Y</b> %B %d"

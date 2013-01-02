@@ -1,0 +1,8 @@
+
+%article.post.row
+  .span8
+    = render 'post_header', post: post
+    = markdown post.content
+    = render 'post_footer', post: post
+  .span4
+    = render post.author

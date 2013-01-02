@@ -1,0 +1,13 @@
+
+%header.post-header
+  %h2
+    = link_to_if action_name != 'show', post.title, post
+  
+  .subheader
+    %time.pull-right{ datetime: post.created_at.iso8601 }
+      / %span.year= post.created_at.strftime("%Y")
+      = l(post.created_at.to_date, format: :fancy).html_safe
+    .comment
+      = link_to post_path(post, anchor: 'comments') do
+        %i.icon-comment
+        = t('leave_a_comment')

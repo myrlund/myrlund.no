@@ -1,0 +1,23 @@
+%aside.author-meta.well
+  .media
+    .image.media-object.pull-right
+      = user_image(user)
+    .media-body
+      %h3.media-heading
+        = user
+        - if user.position
+          %small= user.position
+  
+  %dl.dl-horizontal
+    - if user.twitter
+      %dt Twitter
+      %dd= link_to "@#{user.twitter}", "http://twitter.com/#{user.twitter}"
+    - if user.github
+      %dt Github
+      %dd= link_to user.github, "http://github.com/#{user.twitter}"
+    - if user.website
+      %dt= t('website')
+      %dd= link_to user.website, user.website
+
+  
+  = markdown(user.bio || user.short_bio)

@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// Variables
+@import "twitter/bootstrap/variables";
+
+$baseFontFamily: $altFontFamily;
+$baseFontSize: 87.5%;
+//$headingsFontFamily: $altFontFamily;
+$linkColor: #9f2c30;
+$textColor: #444;
+$grayLighter: #f5f5f5;
+$grayLight: darken($grayLighter, 10%);
+$gray: darken($grayLight, 25%);
+$grayDark: lighten($textColor, 10%);
+
+$horizontalComponentOffset: 30px;
+
+@import "twitter/bootstrap";
+
+$horizontalComponentOffset: 60px;
+
+// Add space for fixed navbar
+//body { padding-top: $navbarHeight + $baseLineHeight; }
+
+// Add responsiveness
+@import "twitter/bootstrap/responsive";
+
+@import "typography";
+@import "structure";
+@import "controls";
+@import "pygments";
+
+@import "posts";

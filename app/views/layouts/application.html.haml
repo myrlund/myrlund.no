@@ -1,0 +1,50 @@
+!!! 5
+%html{ lang: I18n.locale }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title Myrlund.no
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{ class: controller_name }
+    #page.container
+      %aside#top.pull-right
+        - if user_signed_in?
+          = t('signed_in_as', user: current_user.to_s)
+          —
+          = t('not_you')
+          
+          = link_to t('sign_out'), destroy_user_session_path, method: :delete
+        - else
+          = link_to t('sign_in'), new_user_session_path
+      
+      %header#head
+      
+        %h1
+          = link_to "Jonas Myrlund", root_path
+        
+        .tagline
+      
+          %nav#main_menu.pull-right
+            %ul
+              %li= link_to "Hjem", root_path, class: 'active'
+              - if can?(:create, Post)
+                %li= link_to t('new_post'), new_post_path
+      
+          %small
+            = t('tagline')
+      
+      %section#body
+        #flashes
+          - flash.each do |name, msg|
+            .alert{ class: "alert-#{name == :notice ? "success" : "error" }" }
+              %a.close{ data: { dismiss: "alert" } } ×
+              = msg
+        
+        = yield
+    
+    %footer#foot
+      .container
+        %p
+          This is the footer.

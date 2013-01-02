@@ -1,0 +1,58 @@
+
+article.post {
+  margin-bottom: 3em;
+}
+
+article.post > div.span8 > p:first-child {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.post .author-meta {
+  margin-top: 10px;
+  
+  h3 {
+    font-weight: normal;
+    padding-top: .1em;
+    //margin-bottom: 25px;
+    
+    small {
+      display: block;
+      font-size: .75em;
+      color: $gray;
+    }
+  }
+}
+
+.post-header {
+  h2 {
+    margin-bottom: .2em;
+  }
+  
+  padding-bottom: .4em;
+  border-bottom: 3px double $grayLight;
+  margin-bottom: 1.5em;
+  
+  .subheader {
+    opacity: .6;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.post-footer {
+  @include clearfix;
+  
+  padding: 1em 0 .4em;
+  border-bottom: 3px double $grayLight;
+  
+  //padding: .6em .65em .2em;
+  //background: $grayLighter;
+  //border-top: 1px dashed $grayLight;
+  
+  opacity: .8;
+  //color: lighten($textColor, 20%);
+}

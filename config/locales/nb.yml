@@ -1,0 +1,14 @@
+nb:
+  sign_in: Logg inn
+  sign_out: Logg ut
+  leave_a_comment: Skriv en kommentar
+  website: Nettsted
+  new_post: Nytt innlegg
+  signed_in_as: "Logget inn som %{user}"
+  not_you: Ikke deg?
+  
+  tagline: Ord i en stor sky
+  
+  date:
+    formats:
+      fancy: ! '%d. %B <b>%Y</b>'

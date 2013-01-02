@@ -1,0 +1,11 @@
+
+%footer.post-footer
+  %aside.tags.pull-right
+    %i.icon-tag
+    / %em tags &larr;
+    = post.category
+  - if can?(:edit, post)
+    %aside.tools
+      = link_to edit_post_path(post) do
+        %i.icon-pencil
+        edit post

@@ -1,0 +1,25 @@
+
+.input {
+  input, textarea {
+    color: $grayDark;
+    padding: 8px;
+    min-width: 62%;
+  }
+}
+
+input.string {
+  font-size: 1.4em;
+  height: auto;
+  padding: .4em;
+  font-family: $serifFontFamily;
+}
+
+textarea {
+  font-size: 1.1em;
+  font-family: $monoFontFamily;
+}
+
+button, .btn {
+  font-family: $sansFontFamily;
+  font-size: 1.1em;
+}
