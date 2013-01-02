@@ -95,6 +95,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
+    mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -192,6 +193,7 @@ DEPENDENCIES
   guard-rspec
   haml-rails
   jquery-rails
+  mysql2
   pygments.rb
   rails (= 3.2.6)
   rails-i18n
