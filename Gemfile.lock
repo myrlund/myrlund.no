@@ -83,7 +83,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.5.0)
-    mysql2 (0.3.11)
+    mysql2 (0.3.10)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -165,7 +165,7 @@ DEPENDENCIES
   devise-i18n
   haml-rails
   jquery-rails
-  mysql2
+  mysql2 (= 0.3.10)
   pygments.rb
   rails (= 3.2.6)
   rails-i18n
