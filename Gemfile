@@ -43,13 +43,12 @@ gem 'redcarpet'
 gem 'haml-rails'
 gem 'simple_form'
 
-# Testing and spec'ing
-group :test do
-  gem 'rspec'
-  gem 'guard-rspec'
-  gem 'rb-fsevent', require: false
-end
+# # Testing and spec'ing
+# group :test do
+#   gem 'rspec'
+#   gem 'guard-rspec'
+#   # gem 'rb-fsevent', require: false
+# end
 
 # Deployment
 gem 'capistrano'
-gem 'yaml_db'
