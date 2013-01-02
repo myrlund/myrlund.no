@@ -6,7 +6,7 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'mysql2', '0.3.10', group: :production
+gem 'mysql2', group: :production
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,7 +15,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
   
   gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                                 git: 'https://github.com/anjlab/bootstrap-rails.git'
