@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
   
   before_filter :set_locale
   def set_locale
-    I18n.locale = extract_locale_from_accept_language_header if extract_locale_from_accept_language_header
-    logger.debug "* Locale set to '#{I18n.locale}'"
+    unless params[:locale]
+      I18n.locale = extract_locale_from_accept_language_header if extract_locale_from_accept_language_header
+      logger.debug "* Locale set to '#{I18n.locale}'"
+    end
   end
   
   before_filter :store_location
