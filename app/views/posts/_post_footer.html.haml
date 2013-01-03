@@ -1,11 +1,17 @@
 
 %footer.post-footer
-  %aside.tags.pull-right
-    %i.icon-tag
-    / %em tags &larr;
-    = post.category
+  %span.comments
+    %i.icon-comment
+    = link_to post_path(post, anchor: 'disqus_thread'), "data-disqus-identifier" => post.id do
+      n comments
+  
   - if can?(:edit, post)
-    %aside.tools
+    %span.tools
+      %i.icon-pencil
       = link_to edit_post_path(post) do
-        %i.icon-pencil
-        edit post
+        Edit post
+  
+  - unless current_page?(url_for(post))
+    %span.read-more.pull-right
+      = link_to t('to_article'), post
+    

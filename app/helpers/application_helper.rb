@@ -6,7 +6,7 @@ module ApplicationHelper
     email = user.email.downcase.strip
     hash = Digest::MD5.hexdigest(email)
     
-    image_tag "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+    image_tag "http://www.gravatar.com/avatar/#{hash}?s=#{size}", class: 'img-rounded'
   end
   
   def markdown(text)

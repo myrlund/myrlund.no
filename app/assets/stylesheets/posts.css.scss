@@ -14,7 +14,8 @@ article.post > div.span8 > p:first-child {
   
   h3 {
     font-weight: normal;
-    padding-top: .1em;
+    padding-top: .4em;
+    line-height: 33px;
     //margin-bottom: 25px;
     
     small {
@@ -27,7 +28,7 @@ article.post > div.span8 > p:first-child {
 
 .post-header {
   h2 {
-    margin-bottom: .2em;
+    margin-bottom: .4em;
   }
   
   padding-bottom: .4em;
@@ -55,4 +56,14 @@ article.post > div.span8 > p:first-child {
   
   opacity: .8;
   //color: lighten($textColor, 20%);
+  
+  span {
+    display: inline-block;
+    margin-right: 1.5em;
+    
+    &.pull-right {
+      margin-right: 0;
+      margin-left: 1.5em;
+    }
+  }
 }
