@@ -6,6 +6,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    unless can?(:manage, Post)
+      @posts = @posts.published
+    end
+    
     respond_with @posts
   end
 

@@ -23,3 +23,8 @@ button, .btn {
   font-family: $sansFontFamily;
   font-size: 1.1em;
 }
+
+.label-transparent {
+  background: none;
+  text-shadow: none;
+}

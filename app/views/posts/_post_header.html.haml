@@ -1,7 +1,15 @@
 
 %header.post-header
   %h2
-    = link_to_if action_name != 'show', post.title, post
+    = link_to_unless_current post.title, post
+    - unless post.published?
+      %span.label.label-info{ title: "Will be published at: #{l(post.published_at, format: :short)}" }
+        Unpublished
+    - if can?(:edit, post)
+      %span.label.label-transparent
+        = link_to edit_post_path(post) do
+          %i.icon-pencil
+          edit post
   
   .subheader
     = link_to post do

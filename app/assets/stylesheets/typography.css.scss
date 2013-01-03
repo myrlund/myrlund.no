@@ -2,6 +2,9 @@
 $weak: lighten($textColor, 35%);
 
 h1, h2, h3, h4 {
+  //line-height: 1.4;
+  //padding-top: .4em;
+  
   &, a {
     color: $headingsColor;
     text-decoration: none;
@@ -101,6 +104,14 @@ nav { //h1, h2, h3,
       color: $linkColor;
     }
   }
+}
+
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  padding: .2em .4em .1em;
+  font-family: $sansFontFamily;
+  vertical-align: middle;
 }
 
 .post-header, .post-footer {
