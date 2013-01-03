@@ -127,6 +127,8 @@ GEM
       json (~> 1.4)
     redcarpet (2.2.2)
     ref (1.0.2)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.4)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -175,6 +177,7 @@ DEPENDENCIES
   rails (= 3.2.6)
   rails-i18n
   redcarpet
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3

@@ -53,3 +53,4 @@ gem 'simple_form'
 
 # Deployment
 gem 'capistrano'
+gem 'rvm-capistrano'
