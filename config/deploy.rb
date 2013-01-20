@@ -1,4 +1,4 @@
-# require "bundler/capistrano"
+require "bundler/capistrano"
 
 require "./config/capistrano_database"
 
