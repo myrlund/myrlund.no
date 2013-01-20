@@ -29,9 +29,11 @@
       
           %nav#main_menu.pull-right
             %ul
-              %li= link_to "Hjem", root_path, class: 'active'
+              %li= link_to "Hjem", root_path, class: current_page?(root_path) ? 'active' : ''
+              - if can?(:manage, Post)
+                %li= link_to t('posts.drafts'), drafts_posts_path, class: current_page?(drafts_posts_path) ? 'active' : ''
               - if can?(:create, Post)
-                %li= link_to t('new_post'), new_post_path
+                %li= link_to t('new_post'), new_post_path, class: current_page?(new_post_path) ? 'active' : ''
       
           %small
             = t('tagline')

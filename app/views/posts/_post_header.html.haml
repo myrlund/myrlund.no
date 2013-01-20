@@ -3,8 +3,12 @@
   %h2
     = link_to_unless_current post.title, post
     - unless post.published?
-      %span.label.label-info{ title: "Will be published at: #{l(post.published_at, format: :short)}" }
-        Unpublished
+      - if post.draft?
+        %span.label.label-info
+          Draft
+      - else
+        %span.label.label-info{ title: "Will be published at: #{l(post.published_at, format: :short)}" }
+          Unpublished
     - if can?(:edit, post)
       %span.label.label-transparent
         = link_to edit_post_path(post) do

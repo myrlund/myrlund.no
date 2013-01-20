@@ -3,8 +3,10 @@ MyrlundNo::Application.routes.draw do
   scope "(:locale)" do
   
     devise_for :users
-  
-    resources :posts
+    
+    resources :posts do
+      get :drafts, on: :collection
+    end
     resources :categories
     resources :users
   

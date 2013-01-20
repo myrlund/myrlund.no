@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   respond_to :html, :json
   
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:draft]
   
   # GET /posts
   # GET /posts.json
@@ -11,6 +11,14 @@ class PostsController < ApplicationController
     end
     
     respond_with @posts
+  end
+  
+  def drafts
+    @posts = Post.drafts
+    
+    authorize! :manage, @posts
+    
+    render 'index'
   end
 
   # GET /posts/1
