@@ -47,7 +47,7 @@ class HTMLwithPygments < Redcarpet::Render::HTML
     end
   end
   def image(link, title, alt_text)
-    image_tag(link, :title => title, :alt => alt_text, :class => 'img-polaroid')
+    image_tag(link, :title => title, :alt => alt_text, :class => 'img-rounded pull-right')
   end
   def block_quote(quote)
     content_tag(:blockquote, quote, class: 'foobar')
