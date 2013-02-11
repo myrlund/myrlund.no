@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    alias_action :drafts, to: :index
+    # alias_action :drafts, to: :index
     
     can :read, :all
     
