@@ -26,6 +26,10 @@ end
 
 gem 'jquery-rails'
 
+# Testing and spec-ing
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+
 # Auth
 gem 'devise'
 gem 'cancan'
@@ -54,3 +58,7 @@ gem 'simple_form'
 # Deployment
 gem 'capistrano'
 gem 'rvm-capistrano'
+
+group :production do
+  gem 'unicorn'
+end
