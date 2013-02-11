@@ -1,46 +1,54 @@
-require "bundler/capistrano"
+################################################################################
+# Much thanks to http://ryanflorence.com/deploying-with-capistrano-without-rails/
+################################################################################
 
-require "./config/capistrano_database"
+# replace these with your server's information
+set :domain,  "myrlund.no"
+set :user,    "jonas"
 
+# name this the same thing as the directory on your server
+set :application, "blog"
+
+
+# Location of the repository that will be deployed
+set :repository, "git@github.com:myrlund/myrlund.no.git"
+
+server "#{domain}", :app, :web, :db, :primary => true
+
+set :deploy_via, :copy
+set :copy_exclude, [".git", ".DS_Store"]
+set :scm, :git
+set :branch, "master"
+# set this path to be correct on yoru server
+set :deploy_to, "/var/www/#{application}"
+set :use_sudo, false
+set :keep_releases, 2
+#set :git_shallow_clone, 1
+
+# Uncomment the following section if your server uses RVM
+# ######################################################
+# #                RVM Configurations                  #
+# ######################################################
+# Add RVM's lib directory to the load path.
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+# Load RVM's capistrano plugin.    
 require "rvm/capistrano"
 set :rvm_ruby_string, 'ruby-1.9.3-p125'
-set :rvm_type, :system
+set :rvm_type, :system  # Comment out if using system wide RVM
+# ######################################################
+# #               End RVM Configurations               #
+# ######################################################
+#ssh_options[:paranoid] = false
 
-set :application, "Myrlund.no"
-set :repository,  "git@github.com:myrlund/myrlund.no.git"
-set :scm, :git
+# Run bundle install on remote server
+require "bundler/capistrano"
 
-set :deploy_to, "/srv/www/myrlund.no/blog"
+# Symlink database config
+require "./config/capistrano_database"
 
-role :web, "danseku"                          # Your HTTP server, Apache/etc
-role :app, "danseku"                          # This may be the same as your `Web` server
-role :db,  "danseku", :primary => true        # This is where Rails migrations will run
+# Run bundler without development and production gems
+set :bundle_without,  [:development, :test]
+set :bundle_flags, ""
 
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
-
-set :use_sudo, false
-set :ssh_options, {:forward_agent => true}
-
-# If you are using Passenger mod_rails uncomment this:
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
-end
-
-# Clever assets precompilation
-namespace :deploy do
-  namespace :assets do
-    task :precompile, :roles => :web, :except => { :no_release => true } do
-      run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} assets:precompile}
-      # from = source.next_revision(current_revision)
-      # if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-      # else
-      #   logger.info "Skipping asset pre-compilation because there were no asset changes"
-      # end
-    end
-  end
-end
+# Color capistrano output for readability
+require "capistrano_colors"
