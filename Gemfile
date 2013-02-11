@@ -57,6 +57,7 @@ gem 'simple_form'
 
 # Deployment
 gem 'capistrano'
+gem 'capistrano_colors'
 gem 'rvm-capistrano'
 
 group :production do
