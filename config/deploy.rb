@@ -2,6 +2,7 @@
 # Much thanks to http://ryanflorence.com/deploying-with-capistrano-without-rails/
 ################################################################################
 
+
 # replace these with your server's information
 set :domain,  "myrlund.no"
 set :user,    "jonas"
@@ -31,7 +32,7 @@ set :keep_releases, 2
 # ######################################################
 # Add RVM's lib directory to the load path.
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-# Load RVM's capistrano plugin.    
+# Load RVM's capistrano plugin.
 require "rvm/capistrano"
 set :rvm_ruby_string, 'ruby-1.9.3-p125'
 set :rvm_type, :system  # Comment out if using system wide RVM
@@ -49,6 +50,10 @@ require "./config/capistrano_database"
 # Run bundler without development and production gems
 set :bundle_without,  [:development, :test]
 set :bundle_flags, ""
+
+# after 'deploy:update_code' do
+#   run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
+# end
 
 # Color capistrano output for readability
 require "capistrano_colors"
