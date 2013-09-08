@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/anjlab/bootstrap-rails.git
-  revision: 05d2c564f8a8eef85565d89be1fc96e1d9237faf
+  revision: df1c22ae62eeadecb87266282e78f45fb6d4d2e5
   specs:
     anjlab-bootstrap-rails (3.0.0.2)
       railties (>= 3.0)
@@ -9,34 +9,35 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.6)
-      actionpack (= 3.2.6)
-      mail (~> 2.4.4)
-    actionpack (3.2.6)
-      activemodel (= 3.2.6)
-      activesupport (= 3.2.6)
+    actionmailer (3.2.14)
+      actionpack (= 3.2.14)
+      mail (~> 2.5.4)
+    actionpack (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
-      journey (~> 1.0.1)
-      rack (~> 1.4.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.5)
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
-      sprockets (~> 2.1.3)
-    activemodel (3.2.6)
-      activesupport (= 3.2.6)
+      sprockets (~> 2.2.1)
+    activemodel (3.2.14)
+      activesupport (= 3.2.14)
       builder (~> 3.0.0)
-    activerecord (3.2.6)
-      activemodel (= 3.2.6)
-      activesupport (= 3.2.6)
+    activerecord (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.6)
-      activemodel (= 3.2.6)
-      activesupport (= 3.2.6)
-    activesupport (3.2.6)
-      i18n (~> 0.6)
+    activeresource (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
+    activesupport (3.2.14)
+      i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.2)
+    atomic (1.1.13)
     bcrypt-ruby (3.1.2)
     builder (3.0.4)
     cancan (1.6.10)
@@ -55,10 +56,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    devise (3.0.3)
+    devise (3.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
       warden (~> 1.2.3)
     devise-i18n (0.9.0)
     diff-lcs (1.2.4)
@@ -86,8 +88,7 @@ GEM
     json (1.8.0)
     kgio (2.8.0)
     libv8 (3.16.14.3)
-    mail (2.4.4)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
@@ -113,19 +114,19 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.6)
-      actionmailer (= 3.2.6)
-      actionpack (= 3.2.6)
-      activerecord (= 3.2.6)
-      activeresource (= 3.2.6)
-      activesupport (= 3.2.6)
+    rails (3.2.14)
+      actionmailer (= 3.2.14)
+      actionpack (= 3.2.14)
+      activerecord (= 3.2.14)
+      activeresource (= 3.2.14)
+      activesupport (= 3.2.14)
       bundler (~> 1.0)
-      railties (= 3.2.6)
+      railties (= 3.2.14)
     rails-i18n (0.7.4)
       i18n (~> 0.5)
-    railties (3.2.6)
-      actionpack (= 3.2.6)
-      activesupport (= 3.2.6)
+    railties (3.2.14)
+      actionpack (= 3.2.14)
+      activesupport (= 3.2.14)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -157,8 +158,9 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    sprockets (2.1.3)
+    sprockets (2.2.2)
       hike (~> 1.2)
+      multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.8)
@@ -167,6 +169,8 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
+    thread_safe (0.1.2)
+      atomic
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -192,7 +196,7 @@ DEPENDENCIES
   capistrano
   capistrano_colors
   coderay
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   devise
   devise-i18n
   factory_girl_rails
@@ -201,12 +205,12 @@ DEPENDENCIES
   libv8
   mysql2
   pygments.rb
-  rails (= 3.2.6)
+  rails (= 3.2.14)
   rails-i18n
   redcarpet
   rspec-rails
   rvm-capistrano
-  sass-rails (~> 3.2.3)
+  sass-rails
   simple_form
   sqlite3
   stringex
