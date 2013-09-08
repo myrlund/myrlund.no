@@ -13,7 +13,7 @@
  */
 
 // Variables
-@import "twitter/bootstrap/variables";
+@import "bootstrap/variables";
 
 $baseFontFamily: $altFontFamily;
 $baseFontSize: 87.5%;
@@ -31,7 +31,7 @@ $grayDark: lighten($textColor, 10%);
 
 $horizontalComponentOffset: 30px;
 
-@import "twitter/bootstrap";
+@import "bootstrap";
 
 $horizontalComponentOffset: 60px;
 
@@ -39,7 +39,7 @@ $horizontalComponentOffset: 60px;
 //body { padding-top: $navbarHeight + $baseLineHeight; }
 
 // Add responsiveness
-@import "twitter/bootstrap/responsive";
+@import "bootstrap/responsive";
 
 @import "typography";
 @import "structure";

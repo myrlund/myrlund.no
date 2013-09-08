@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/anjlab/bootstrap-rails.git
-  revision: df1c22ae62eeadecb87266282e78f45fb6d4d2e5
-  specs:
-    anjlab-bootstrap-rails (3.0.0.2)
-      railties (>= 3.0)
-      sass (>= 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,6 +31,8 @@ GEM
     arel (3.0.2)
     atomic (1.1.13)
     bcrypt-ruby (3.1.2)
+    bootstrap-sass (2.3.2.2)
+      sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.10)
     capistrano (2.15.5)
@@ -191,7 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails!
+  bootstrap-sass
   cancan
   capistrano
   capistrano_colors
